@@ -30,7 +30,10 @@ export default {
   methods: {
     updateContents() {
       Axios.get("/api/v1/home/index.json").then(response => {
-        this.contents = response.data.contents;
+        const responseData = response.data;
+        this.title = responseData.title;
+        this.description = responseData.description;
+        this.contents = responseData.contents;
       });
     }
   }
