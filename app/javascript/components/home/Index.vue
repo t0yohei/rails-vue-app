@@ -1,22 +1,38 @@
 <template>
   <div id="homeIndex">
     <header-view v-bind:title="title" v-bind:description="description"></header-view>
-    <!-- <contents :contents="contents"></contents> -->
+    <contents v-bind:contents="contents"></contents>
   </div>
 </template>
 
 <script>
 import HeaderView from "../HeaderView.vue";
+import Contents from "./Contents.vue";
+import Axios from "axios";
+
 export default {
   components: {
-    "header-view": HeaderView
+    "header-view": HeaderView,
+    contents: Contents
   },
   data: function() {
     return {
-      title: "",
-      description: "",
+      title: "title",
+      description: "description",
       contents: {}
     };
+  },
+
+  created: function() {
+    this.updateContents();
+  },
+
+  methods: {
+    updateContents() {
+      Axios.get("/api/v1/home/index.json").then(response => {
+        this.contents = response.data.contents;
+      });
+    }
   }
 };
 </script>
