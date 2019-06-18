@@ -1,5 +1,5 @@
 <template>
-  <div id="homeIndex">
+  <div>
     <header-view v-bind:title="title" v-bind:description="description"></header-view>
     <contents v-bind:contents="contents"></contents>
   </div>
@@ -19,7 +19,7 @@ export default {
     return {
       title: "title",
       description: "description",
-      contents: {}
+      contents: []
     };
   },
 

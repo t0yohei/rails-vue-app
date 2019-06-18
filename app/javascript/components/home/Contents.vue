@@ -3,15 +3,13 @@
     <table class="contents">
       <tr>
         <th>名前</th>
-        <th>英語訳</th>
-        <th>表記例</th>
-        <th>用途</th>
+        <th>リンク</th>
       </tr>
-      <tr v-for="content in contents" v-bind:key="content.name">
-        <td>{{ content.name }}</td>
-        <td>{{ content.english }}</td>
-        <td>{{ content.sample }}</td>
-        <td>{{ content.usage }}</td>
+      <tr v-for="link in contents.links" v-bind:key="link.name">
+        <td>{{ link.name }}</td>
+        <td>
+          <a v-bind:href="link.url">{{ link.text }}</a>
+        </td>
       </tr>
     </table>
   </div>
@@ -28,7 +26,7 @@
 <script>
 export default {
   props: {
-    contents: Array
+    contents: Object
   }
 };
 </script>
