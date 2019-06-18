@@ -1,7 +1,9 @@
-class Api::V1::HomeController < ApplicationController
+# frozen_string_literal: true
+
+class Api::V1::IntegerLiteralDescriptionsController < ApplicationController
   def index
-    title = "Home#index"
-    description = "整数リテラルの分類表"
+    title = 'Home#index'
+    description = '整数リテラルの分類表'
     contents = get_integer_literals
     result_values = {
       title: title,
@@ -20,26 +22,26 @@ class Api::V1::HomeController < ApplicationController
         name: '10進数',
         english: 'decimal',
         sample: 42,
-        usage: '数値',
+        usage: '数値'
       },
       {
         name: '2進数',
         english: 'binary digits',
         sample: 0b0001,
-        usage: 'ビット演算など',
+        usage: 'ビット演算など'
       },
       {
         name: '8進数',
         english: 'octal',
         sample: 0o777,
-        usage: 'ファイルのパーミッションなど',
+        usage: 'ファイルのパーミッションなど'
       },
       {
         name: '16進数',
         english: 'hexadecimal, hex',
         sample: 0xEEFF,
-        usage: '文字のコードポイント、RGB値など',
-      },
+        usage: '文字のコードポイント、RGB値など'
+      }
     ]
   end
 end
