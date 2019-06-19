@@ -11,7 +11,7 @@ class HomeController < ApplicationController
 
   def get_contents
     {
-      links: [
+      outer_links: [
         {
           name: 'Qiitaページ',
           text: 'Qiita',
@@ -21,13 +21,12 @@ class HomeController < ApplicationController
           name: 'ソースコード',
           text: 'GitHub',
           url: 'https://github.com/t0yohei/rails-vue-app'
-        },
-        {
-          name: '整数リテラル分類表',
-          text: '遷移リンク',
-          url: '/integer_literal_descriptions/index'
         }
-      ]
+      ],
+      inner_links: [{
+        label: '整数リテラル分類表',
+        url: url_for(action: 'index', controller: 'integer_literal_descriptions')
+      }]
     }
   end
 end
