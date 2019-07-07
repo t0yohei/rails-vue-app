@@ -15,3 +15,4 @@
 4. `yarn install`
 5. `bin/webpack`
 6. `rails s`
+7. ブラウザから `http://localhost:3000/home/index` にアクセス
