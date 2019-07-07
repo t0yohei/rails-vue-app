@@ -13,7 +13,7 @@ class HomeController < ApplicationController
         {
           name: 'Qiitaページ',
           text: 'Qiita',
-          url: 'https://qiita.com/'
+          url: 'https://qiita.com/t0yohei/items/d516fefaaad69b4022ec'
         },
         {
           name: 'ソースコード',
