@@ -1,24 +1,17 @@
 # README
+[Vue.js チュートリアル for Rails エンジニア](https://qiita.com/t0yohei/items/d516fefaaad69b4022ec) という Qiita に投稿したチュートリアル記事のサンプルコードです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 使用するバージョン
+- ruby: 2.6.2
+- rails: 5.2.3
+- webpacker: 4.0.7
+- yarn: 1.16.0
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 起動方法
+0. ruby, yarn のインストール
+1. `git clone git@github.com:t0yohei/rails-vue-app.git` 
+2. `cd rails-vue-app`
+3. `bundle install`
+4. `yarn install`
+5. `bin/webpack`
+6. `rails s`
